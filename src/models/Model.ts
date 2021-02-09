@@ -34,7 +34,8 @@ export class Model<T extends HasId> {
         private sync: ApiSync<T>
     ) { }
 
-    // These passthru methods work because the objects of the constructor are initialized first, however this approach is a bit brittle.
+    // These pass-through methods work because the objects of the constructor 
+    // are initialized first, however this approach is a bit brittle.
     on = this.events.on
     trigger = this.events.trigger;
     get = this.attributes.get;
